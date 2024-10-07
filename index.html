@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="image-wrapper">
+      <img class="logo" src="./images/logo.svg" alt="">
+    </div>
+  <main>
+    <div class="bill-input-container">
+      <label for="amount">Bill</label>
+      <form id="amount">
+      <input type="number" id="amount" name="amount" placeholder="00.00">
+      </form>
+    </div>
+    <div class="tip-input-container">
+      <label for="tip">Select Tip%</label>
+      <form id="tip-form">
+        <button type="button" class="btn-5 tip-button">5%</button>
+        <button type="button" class="btn-10 tip-button">10%</button>
+        <button type="button" class="btn-15 tip-button">15%</button>
+        <button type="button" class="btn-20 tip-button">20%</button>
+        <button type="button" class="btn-25 tip-button">25%</button>
+        <input type="number" class="custom-tip" placeholder="Custom">
+      </form>
+    </div>
+    <div class="people-input-container">
+      <label for="number">Number of People</label>
+      <input type="number" id="number" name="number" placeholder="0">
+    </div>
+    <div class="result-wrapper-container">
+      <div class="tip-amount-container">
+        <div class="tip-amount">
+          <p class="tipText">Tip Amount</p>
+          <p class="secondText">/ person</p>
+        </div>
+        <p class="tipResult">$4.27</p>
+      </div>
+      <div class="total-amount-container">
+        <div class="total-amount">
+          <p class="amountText">Total</p>
+          <p class="secondText">/ person</p>
+        </div>
+        <p class="totalResult">$32.79</p>
+      </div>
+      <button class="reset-button">RESET</button>
+    </div>
+  </main>
+  
+</body>
+</html>
+
