@@ -8,47 +8,76 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="index.css">
+<script defer src="main.js"></script>
 </head>
 <body>
     <div class="image-wrapper">
       <img class="logo" src="./images/logo.svg" alt="">
     </div>
   <main>
-    <div class="bill-input-container">
-      <label for="amount">Bill</label>
-      <form id="amount">
-      <input type="number" id="amount" name="amount" placeholder="00.00">
-      </form>
-    </div>
+    <div class="right-section">
+      <div class="bill-input-container">
+        <label for="bill-amount">Bill</label>
+        <form id="bill-form">
+          <input type="number" id="bill-amount" name="amount" placeholder="00.00">
+        </form>
+      </div>
     <div class="tip-input-container">
-      <label for="tip">Select Tip%</label>
+      <label for="tip">Select Tip %</label>
       <form id="tip-form">
-        <button type="button" class="btn-5 tip-button">5%</button>
-        <button type="button" class="btn-10 tip-button">10%</button>
-        <button type="button" class="btn-15 tip-button">15%</button>
-        <button type="button" class="btn-20 tip-button">20%</button>
-        <button type="button" class="btn-25 tip-button">25%</button>
+        <!-- Tip 5% -->
+        <input type="radio" name="tip" id="tip-5" value="5">
+        <label for="tip-5" class="btn-5 tip-button">5%</label>
+    
+        <!-- Tip 10% -->
+        <input type="radio" name="tip" id="tip-10" value="10">
+        <label for="tip-10" class="btn-10 tip-button">10%</label>
+    
+        <!-- Tip 15% -->
+        <input type="radio" name="tip" id="tip-15" value="15">
+        <label for="tip-15" class="btn-15 tip-button">15%</label>
+    
+        <!-- Tip 20% (selected by default) -->
+        <input type="radio" name="tip" id="tip-20" value="20" checked>
+        <label for="tip-20" class="btn-20 tip-button">20%</label>
+    
+        <!-- Tip 25% -->
+        <input type="radio" name="tip" id="tip-25" value="25">
+        <label for="tip-25" class="btn-25 tip-button">25%</label>
+    
+        <!-- Custom Tip Input -->
         <input type="number" class="custom-tip" placeholder="Custom">
       </form>
     </div>
     <div class="people-input-container">
       <label for="number">Number of People</label>
-      <input type="number" id="number" name="number" placeholder="0">
-    </div>
+      <input
+      type="number"
+      id="number"
+      name="number"
+      value="1"
+      min="1"
+      step="1"
+    >
+    <span class="error-message" id="number-error"></span>
+  </div>
+  </div>
     <div class="result-wrapper-container">
+      <div class="top-container">
       <div class="tip-amount-container">
         <div class="tip-amount">
           <p class="tipText">Tip Amount</p>
           <p class="secondText">/ person</p>
         </div>
-        <p class="tipResult">$4.27</p>
+        <p class="tipResult"></p>
       </div>
       <div class="total-amount-container">
         <div class="total-amount">
           <p class="amountText">Total</p>
           <p class="secondText">/ person</p>
         </div>
-        <p class="totalResult">$32.79</p>
+        <p class="totalResult"></p>
+      </div>
       </div>
       <button class="reset-button">RESET</button>
     </div>
